@@ -5,6 +5,7 @@
     var posts = Model;
 }
 
+<a href="@Url.Action("Create", "Pizza")">Crea</a>
 @if (posts.Length is 0)
 {
     <p>No pizzas to display :\</p>
@@ -23,7 +24,7 @@ else
         <tbody>
             @foreach (var post in posts)
             {
-                <a href="@Url.Action("Detail", "Pizza", new{ Id = post.Id })">@post.NomePizza</a>
+                <a href="@Url.Action("Detail", "Pizza", new{ Id = post.Id })">@post.NomePizza </a>
             }
         </tbody>
     </table>
