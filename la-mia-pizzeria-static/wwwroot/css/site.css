@@ -1,0 +1,8 @@
+table tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.table {
+    margin-bottom: 3rem;
+}
+
