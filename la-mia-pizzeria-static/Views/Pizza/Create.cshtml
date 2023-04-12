@@ -1,1 +1,34 @@
-﻿Sono il create 
+﻿@model Post
+
+@{
+	var post = Model;
+}
+
+<h2>Nuova pizza</h2>
+
+<div class="container">
+	<form method="post" asp-controller="Post" asp-action="Create" enctype="multipart/form-data">
+		@Html.AntiForgeryToken()
+		<div class="form-field">
+			<label asp-for="NomePizza">Title</label>
+			<input asp-for="NomePizza" />
+			<span asp-validation-for="NomePizza" class="text error"></span>
+		</div>
+		<div class="form-field">
+			<label asp-for="Ingredienti">Ingredienti</label>
+			<textarea asp-for="Ingredienti"></textarea>
+			<span asp-validation-for="Ingredienti" class="text error"></span>
+		</div>
+		@*<div class="form-field"> QUESTO PER L'IMPORT DELL'IMMAGINE
+			<label asp-for="Immagine">Immagine</label>
+			<input type="file" asp-for="Immagine" />
+			<span asp-validation-for="Immagine" class="text error"></span>
+		</div>*@
+		<div class="form-field">
+			<label asp-for="Prezzo">Prezzo</label>
+			<input type="number" asp-for="Prezzo"/>
+			<span asp-validation-for="Prezzo" class="text error"></span>
+		</div>
+		<button type="submit">Create</button>
+	</form>
+</div>
