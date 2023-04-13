@@ -1,8 +1,8 @@
-table tr:nth-child(even) {
-    background-color: lightgray;
+body {
+    background-color: beige;
 }
 
-.table {
-    margin-bottom: 3rem;
+.error {
+    color: red;
+    font-size: small;
 }
-
